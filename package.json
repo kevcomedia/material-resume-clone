@@ -1,0 +1,23 @@
+{
+  "name": "material-resume-clone",
+  "version": "1.0.0",
+  "description": "A clone of the Material Resume from [here](https://creativemarket.com/ikonome/686585-Material-Resume-Blue/screenshots/#screenshot3).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevcomedia/material-resume-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevcomedia/material-resume-clone/issues"
+  },
+  "homepage": "https://github.com/kevcomedia/material-resume-clone#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
