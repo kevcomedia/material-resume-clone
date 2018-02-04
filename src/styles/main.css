@@ -10,6 +10,8 @@
 
 body {
   font: 300 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Giving each h2 its own class for BEM is probably not worth it */
@@ -21,4 +23,41 @@ h2 {
 /* I'll probably move this as a BEM identifier later */
 h3 {
   font-size: 1rem;
+}
+
+/*
+ * Nav bar
+ */
+
+.nav {
+  background: #028cd5;
+  font-size: 1.1rem;
+}
+
+.nav__row {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-left: 0;
+}
+
+.nav__link {
+  color: #29bdf5;
+  display: block;
+  margin: 0 .625rem;
+  padding: 1.2rem 0 .6rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link--first {
+  padding-left: 0;
+}
+
+.nav__link--active {
+  border-bottom: .125rem solid #fff;
+  color: #fff;
 }
