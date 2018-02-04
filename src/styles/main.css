@@ -1,0 +1,24 @@
+/*
+ * Global styles
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 300 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Giving each h2 its own class for BEM is probably not worth it */
+h2 {
+  color: #0aa6e1;
+  font-weight: 300;
+}
+
+/* I'll probably move this as a BEM identifier later */
+h3 {
+  font-size: 1rem;
+}
