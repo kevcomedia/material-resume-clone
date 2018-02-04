@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kevcomedia/material-resume-clone#readme",
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1"
   }
 }
