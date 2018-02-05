@@ -108,6 +108,12 @@ h3 {
 .information__heading {
   color: #0aa6e1;
   font-weight: 300;
+  margin-top: 0;
+}
+
+.information__left,
+.information__right {
+  padding-top: 60px;
 }
 
 .information__left {
@@ -119,11 +125,17 @@ h3 {
    * might have to do the same for the other elements, for consistency and
    * sanity. */
   padding-left: 130px;
+  padding-right: 40px;
 }
 
 .information__right {
   background: #eee;
+  padding-left: 40px;
   padding-right: 130px;
+}
+
+.information__section {
+  margin-bottom: 20px;
 }
 
 /*
