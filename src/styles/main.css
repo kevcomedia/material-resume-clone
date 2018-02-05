@@ -149,9 +149,72 @@ h3 {
 
 .personal__heading {
   text-align: left;
+  width: 35%;
 }
 
 .personal__cell {
   border-bottom: 1px solid lightgray;
   padding: .6rem 0;
 }
+
+/*
+ * Software
+ */
+
+.software {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.software__heading {
+  font-weight: 300;
+  text-align: left;
+  width: 35%;
+}
+
+.software__cell {
+  padding: .3rem 0;
+}
+
+/*
+ * Progress
+ */
+
+.progress {
+  background: #cbcbcb;
+  display: block;
+  height: .5rem;
+  width: 100%;
+}
+
+.progress__value {
+  background: #0aa6e1;
+  display: block;
+  height: 100%;
+  margin: 0;
+}
+
+.progress__value--100 {
+  width: 100%;
+}
+
+.progress__value--90 {
+  width: 90%;
+}
+
+.progress__value--80 {
+  width: 80%;
+}
+
+.progress__value--70 {
+  width: 70%;
+}
+
+.progress__value--60 {
+  width: 60%;
+}
+
+.progress__value--50 {
+  width: 50%;
+}
+
