@@ -101,3 +101,28 @@ h3 {
   margin: 0 auto;
   max-width: 1100px;
 }
+
+/*
+ * Information
+ */
+
+.information {
+  display: flex;
+}
+
+
+.information__left {
+  background: #f7f7f7;
+  border-right: 1px solid lightgray;
+  flex-basis: 42%;
+  /* I really dislike having to set the padding like this, but I guess I have no
+   * choice, so the left and right sides have their own background colors. I
+   * might have to do the same for the other elements, for consistency and
+   * sanity. */
+  padding-left: 130px;
+}
+
+.information__right {
+  background: #eee;
+  padding-right: 130px;
+}
