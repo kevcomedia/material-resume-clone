@@ -125,3 +125,21 @@ h3 {
   background: #eee;
   padding-right: 130px;
 }
+
+/*
+ * Personal
+ */
+
+.personal {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.personal__heading {
+  text-align: left;
+}
+
+.personal__cell {
+  border-bottom: 1px solid lightgray;
+  padding: .6rem 0;
+}
