@@ -245,12 +245,15 @@ body {
  */
 
 .info-list {
+  border-left: 1px solid #0aa6e1;
   list-style-type: none;
-  padding-left: 0;
+  padding-left: 40px;
   width: 100%;
 }
 
 .info-list__item {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1.5rem;
   display: grid;
   grid-template-columns: 1fr min-content;
   width: 100%;
