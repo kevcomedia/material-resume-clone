@@ -218,3 +218,28 @@ h3 {
   width: 50%;
 }
 
+/*
+ * Hobbies
+ */
+
+.hobbies {
+  display: grid;
+  grid-gap: 10px 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.hobbies__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.hobbies__label {
+  display: block;
+  font-size: .75rem;
+  font-weight: 400;
+  text-align: center;
+}
