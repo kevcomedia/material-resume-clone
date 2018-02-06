@@ -14,11 +14,6 @@ body {
   padding: 0;
 }
 
-/* I'll probably move this as a BEM identifier later */
-h3 {
-  font-size: 1rem;
-}
-
 /*
  * Nav bar
  */
@@ -261,6 +256,23 @@ h3 {
   width: 100%;
 }
 
+.info-list__title,
+.info-list__year,
 .info-list__description {
+  margin-top: 0;
+}
+
+.info-list__title,
+.info-list__year {
+  font-weight: 700;
+}
+
+.info-list__title {
+  font-size: 1rem;
+}
+
+.info-list__description {
+  font-size: .95rem;
   grid-column: span 2;
+  line-height: 1.2em;
 }
