@@ -261,6 +261,23 @@ body {
   display: grid;
   grid-template-columns: 1fr min-content;
   width: 100%;
+  position: relative;
+}
+
+/* The pretty blue bullet */
+.timeline__item::before {
+  background: #0aa6e1;
+  border-radius: 50%;
+  /* Same color as background, but part transparent */
+  box-shadow: 0 0 0 .5rem rgba(10,166,225,.4);
+  content: '';
+  display: block;
+  height: 1rem;
+  /* Or use a transform? But as far as I know transforms don't break the element
+   * out of the normal flow */
+  left: calc(-40px - .5rem);
+  position: absolute;
+  width: 1rem;
 }
 
 .timeline__title,
