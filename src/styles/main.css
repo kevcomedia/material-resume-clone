@@ -241,17 +241,21 @@ body {
 }
 
 /*
- * Info List
+ * Timeline
  */
 
-.info-list {
+.timeline {
+  padding-left: 20px;
+}
+
+.timeline__list {
   border-left: 1px solid #0aa6e1;
   list-style-type: none;
   padding-left: 40px;
   width: 100%;
 }
 
-.info-list__item {
+.timeline__item {
   border-bottom: 1px solid lightgray;
   margin-bottom: 1.5rem;
   display: grid;
@@ -259,22 +263,22 @@ body {
   width: 100%;
 }
 
-.info-list__title,
-.info-list__year,
-.info-list__description {
+.timeline__title,
+.timeline__year,
+.timeline__description {
   margin-top: 0;
 }
 
-.info-list__title,
-.info-list__year {
+.timeline__title,
+.timeline__year {
   font-weight: 700;
 }
 
-.info-list__title {
+.timeline__title {
   font-size: 1rem;
 }
 
-.info-list__description {
+.timeline__description {
   font-size: .95rem;
   grid-column: span 2;
   line-height: 1.2em;
