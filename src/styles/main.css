@@ -304,3 +304,34 @@ body {
   grid-column: span 2;
   line-height: 1.2em;
 }
+
+/*
+ * Social
+ */
+
+.social {
+  background: #0aa1da;
+  display: flex;
+  justify-content: space-around; /* Fallback */
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 2.5rem 130px;
+  width: 100%;
+}
+
+.social__link {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: .9rem;
+  font-weight: 400;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.social__icon {
+  color: #028cd5;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
