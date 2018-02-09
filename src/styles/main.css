@@ -335,3 +335,28 @@ body {
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
+
+/*
+ * Address
+ */
+
+.address {
+  background: #028cd5;
+  color: #fff;
+  font-size: .9rem;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 130px 1.5rem;
+}
+
+/* Not the best name, I know */
+.address__b {
+  font-weight: inherit;
+}
+
+.address__link {
+  color: inherit;
+  text-decoration: none;
+}
