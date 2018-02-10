@@ -337,6 +337,81 @@ body {
 }
 
 /*
+ * Skills
+ */
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+/*
+ * Radial Meter
+ */
+
+.radial-meter {
+  width: 120px;
+  height: 120px;
+}
+
+.radial-meter__circle {
+  fill: none;
+  stroke-width: 12px;
+}
+
+.radial-meter__circle--background {
+  stroke: #dadada;
+}
+
+.radial-meter__circle--foreground {
+  stroke: #0aa1da;
+  /* Circumference, with radius 54px in the markup :( */
+  stroke-dasharray: 339.292px; 
+  transform-origin: center;
+}
+
+/* Offset is calculated as `circumference * (1 - progress)`.
+ * calc() doesn't seem to work.
+ * This is where preprocessors really shine.
+ *
+ * I'd really like `value` to modify the radial-meter block, not the circle
+ * (because `radial-meter--value--100` really sounds more natural), but I have
+ * to do an additional rotation so the progress is counterclockwise. If I
+ * rotated the radial meter itself, the text will also rotate. */
+
+.radial-meter__circle--value--100 {
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+}
+
+.radial-meter__circle--value--90 {
+  stroke-dashoffset: 33.93px;
+  transform: rotate(-54deg);
+}
+
+.radial-meter__circle--value--80 {
+  stroke-dashoffset: 67.86px;
+  transform: rotate(-18deg);
+}
+
+.radial-meter__circle--value--70 {
+  stroke-dashoffset: 101.79px;
+  transform: rotate(18deg);
+}
+
+.radial-meter__circle--value--60 {
+  stroke-dashoffset: 135.72px;
+  transform: rotate(54deg);
+}
+
+.radial-meter__label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+/*
  * Social
  */
 
