@@ -4,171 +4,262 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Material Resume Clone</title>
+  <!-- Uncomment later; I have the font in my laptop, so I don't need this until deployment. -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="#">Hello</a></li>
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">Portfolio</a></li>
+  <nav class="nav">
+    <ul class="nav__row">
+      <li><a class="nav__link nav__link--first" href="#">Hello</a></li>
+      <li><a class="nav__link nav__link--active" href="#">Resume</a></li>
+      <li><a class="nav__link" href="#">Portfolio</a></li>
     </ul>
   </nav>
 
-  <header>
-    <div>
-      <h1>David Brown</h1>
-      <p>Architect</p>
+  <header class="header">
+    <div class="header__title">
+      <h1 class="header__name">David Brown</h1>
+      <p class="header__subtitle">Architect</p>
     </div>
 
-    <p>Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Curabitur blandit tempus protitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula it id elit.</p>
+    <div class="header__description">
+      <p class="header__text">Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Curabitur blandit tempus protitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula it id elit.</p>
+    </div>
   </header>
 
-  <section>
+  <section class="information">
     <!-- Left div -->
-    <div>
-      <section>
-        <h2>Personal</h2>
+    <div class="information__left">
+      <section class="information__section">
+        <h2 class="information__heading">Personal</h2>
 
-        <table>
+        <table class="personal">
           <tr>
-            <th scope="row">Name</th>
-            <td>David Brown</td>
+            <th class="personal__heading personal__cell" scope="row">Name</th>
+            <td class="personal__cell">David Brown</td>
           </tr>
           <tr>
-            <th scope="row">Birthday</th>
-            <td>31st December 1990 (26)</td>
+            <th class="personal__heading personal__cell" scope="row">Birthday</th>
+            <td class="personal__cell">31st Dec 1990 (26)</td>
           </tr>
           <tr>
-            <th scope="row">Relationship</th>
-            <td>Single</td>
+            <th class="personal__heading personal__cell" scope="row">Relationship</th>
+            <td class="personal__cell">Single</td>
           </tr>
           <tr>
-            <th scope="row">Nationality</th>
-            <td>US Citizen</td>
+            <th class="personal__heading personal__cell" scope="row">Nationality</th>
+            <td class="personal__cell">US Citizen</td>
           </tr>
           <tr>
-            <th scope="row">Languages</th>
-            <td>English, French</td>
+            <th class="personal__heading personal__cell" scope="row">Languages</th>
+            <td class="personal__cell">English, French</td>
           </tr>
           <tr>
-            <th scope="row">Telephone</th>
-            <td>+1 (212) 123-4567</td>
+            <th class="personal__heading personal__cell" scope="row">Telephone</th>
+            <td class="personal__cell">+1 (212) 123-4567</td>
           </tr>
         </table>
       </section>
 
-      <section>
-        <h2>Software</h2>
+      <section class="information__section">
+        <h2 class="information__heading">Software</h2>
 
         <!-- TODO replace numbers with progress bars -->
-        <table>
+        <table class="software">
           <tr>
-            <th scope="row">Indesign CC</th>
-            <td>100</td>
+            <th class="software__heading software__cell" scope="row">Indesign CC</th>
+            <td class="software__cell">
+              <div class="progress">
+                <div class="progress__value progress__value--100"></div>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th scope="row">Illustrator CC</th>
-            <td>90</td>
+            <th class="software__heading software__cell" scope="row">Illustrator CC</th>
+            <td class="software__cell">
+              <div class="progress">
+                <div class="progress__value progress__value--90"></div>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th scope="row">Photoshop CC</th>
-            <td>80</td>
+            <th class="software__heading software__cell" scope="row">Photoshop CC</th>
+            <td class="software__cell">
+              <div class="progress">
+                <div class="progress__value progress__value--80"></div>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th scope="row">Sketch 3</th>
-            <td>70</td>
+            <th class="software__heading software__cell" scope="row">Sketch 3</th>
+            <td class="software__cell">
+              <div class="progress">
+                <div class="progress__value progress__value--70"></div>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th scope="row">HTML 5</th>
-            <td>60</td>
+            <th class="software__heading software__cell" scope="row">HTML 5</th>
+            <td class="software__cell">
+              <div class="progress">
+                <div class="progress__value progress__value--60"></div>
+              </div>
+            </td>
           </tr>
           <tr>
-            <th scope="row">CSS 3</th>
-            <td>50</td>
+            <th class="software__heading software__cell" scope="row">CSS 3</th>
+            <td class="software__cell">
+              <div class="progress">
+                <div class="progress__value progress__value--50"></div>
+              </div>
+            </td>
           </tr>
         </table>
       </section>
 
-      <section>
-        <h2>Hobbies</h2>
+      <section class="information__section">
+        <h2 class="information__heading">Hobbies</h2>
 
-        <!-- TODO add icons -->
-        <ul>
-          <li>Outdoors</li>
-          <li>Travelling</li>
-          <li>Soccer</li>
-          <li>Writing</li>
-          <li>Socializing</li>
-          <li>Games</li>
+        <ul class="hobbies">
+          <li class="hobbies__item">
+            <span class="hobbies__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fas fa-tree fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="hobbies__label">Outdoors</span>
+          </li>
+          <li class="hobbies__item">
+            <span class="hobbies__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fas fa-plane fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="hobbies__label">Traveling</span>
+          </li>
+          <li class="hobbies__item">
+            <span class="hobbies__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fas fa-basketball-ball fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="hobbies__label">Basketball</span>
+          </li>
+          <li class="hobbies__item">
+            <span class="hobbies__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fas fa-laptop fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="hobbies__label">Writing</span>
+          </li>
+          <li class="hobbies__item">
+            <span class="hobbies__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fas fa-coffee fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="hobbies__label">Socializing</span>
+          </li>
+          <li class="hobbies__item">
+            <span class="hobbies__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fas fa-gamepad fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="hobbies__label">Games</span>
+          </li>
         </ul>
       </section>
     </div>
 
     <!-- Right div -->
-    <div>
-      <section>
-        <h2>Work</h2>
+    <div class="information__right">
+      <section class="information__section">
+        <h2 class="information__heading">Work</h2>
 
-        <ul>
-          <li>
-            <h3>Design Director @ Big Design, New York</h3>
-            <p>2015</p>
-            <p>Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
-          </li>
-          <li>
-            <h3>Senior Designer @ Design Company, Brooklyn</h3>
-            <p>2012</p>
-            <p>Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
-          </li>
-          <li>
-            <h3>Designer @ Brand New, Paris</h3>
-            <p>2008</p>
-            <p>Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
-          </li>
-        </ul>
+        <div class="timeline">
+          <ul class="timeline__list">
+            <li class="timeline__item">
+              <h3 class="timeline__title">Design Director @ Big Design, New York</h3>
+              <p class="timeline__year">2015</p>
+              <p class="timeline__description">Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
+            </li>
+            <li class="timeline__item">
+              <h3 class="timeline__title">Senior Designer @ Design Company, Brooklyn</h3>
+              <p class="timeline__year">2012</p>
+              <p class="timeline__description">Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
+            </li>
+            <li class="timeline__item">
+              <h3 class="timeline__title">Designer @ Brand New, Paris</h3>
+              <p class="timeline__year">2008</p>
+              <p class="timeline__description">Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section>
-        <h2>Professional Skills</h2>
+      <section class="information__section">
+        <h2 class="information__heading">Professional Skills</h2>
         <!-- TODO make pretty radial progress meters -->
         <p>Later...</p>
       </section>
 
-      <section>
-        <h2>Education</h2>
+      <section class="information__section">
+        <h2 class="information__heading">Education</h2>
 
-        <ul>
-          <li>
-            <h3>MA Graphics @ Royal College of Art, London</h3>
-            <p>2006</p>
-            <p>Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
-          </li>
-          <li>
-            <h3>BA(hons) Graphics @ Central Saint Martins, London</h3>
-            <p>2003</p>
-            <p>Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
-          </li>
-        </ul>
+        <div class="timeline">
+          <ul class="timeline__list">
+            <li class="timeline__item">
+              <h3 class="timeline__title">MA Graphics @ Royal College of Art, London</h3>
+              <p class="timeline__year">2006</p>
+              <p class="timeline__description">Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
+            </li>
+            <li class="timeline__item">
+              <h3 class="timeline__title">BA(hons) Graphics @ Central Saint Martins, London</h3>
+              <p class="timeline__year">2003</p>
+              <p class="timeline__description">Nullam id dolor id nibh vehicula ut id elit. Aenean lanicia bibendum nulla sed consectetur. Aenean eu leo quam.</p>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   </section>
 
   <footer>
-    <!-- TODO add icons -->
-    <ul>
-      <li><a href="#">www.behance.com/david.brown</a></li>
-      <li><a href="#">www.linkedin.com/david.brown</a></li>
-      <li><a href="#">www.twitter.com/david.brown</a></li>
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="social__icon fa-stack fa-fw">
+            <span class="fas fa-circle fa-stack-2x"></span>
+            <span class="fab fa-behance fa-stack-1x fa-inverse"></span>
+          </span>
+          <span class="social__label">www.behance.com/david.brown</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="social__icon fa-stack fa-fw">
+            <span class="fas fa-circle fa-stack-2x"></span>
+            <span class="fab fa-linkedin-in fa-stack-1x fa-inverse"></span>
+          </span>
+          <span class="social__label">www.linkedin.com/david.brown</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="social__icon fa-stack fa-fw">
+            <span class="fas fa-circle fa-stack-2x"></span>
+            <span class="fab fa-twitter fa-stack-1x fa-inverse"></span>
+          </span>
+          <span class="social__label">www.twitter.com/david.brown</span>
+        </a>
+      </li>
     </ul>
 
-    <address>
+    <address class="address">
       <span>
-        Flat 2, 10 Broadway, New York, NY 12345, <b>Call</b>: +1 (212) 123-4567, <b>Email</b>: davidbrown@gmail.com
+        Flat 2, 10 Broadway, New York, NY 12345, <b class="address__b">Call</b>: +1 (212) 123-4567, <b class="address__b">Email</b>: davidbrown@gmail.com
       </span>
       <span>
-        <a href="#">www.davidbrowndesigns.com</a>
+        <a class="address__link" href="#">www.davidbrowndesigns.com</a>
       </span>
     </address>
 

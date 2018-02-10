@@ -1,0 +1,362 @@
+/*
+ * Global styles
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 300 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Nav bar
+ */
+
+.nav {
+  background: #028cd5;
+  font-size: 1.1rem;
+}
+
+.nav__row {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-left: 0;
+}
+
+.nav__link {
+  color: #29bdf5;
+  display: block;
+  margin: 0 .625rem;
+  padding: 1.2rem 0 .6rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link--first {
+  padding-left: 0;
+}
+
+.nav__link--active {
+  border-bottom: .125rem solid #fff;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+
+.header {
+  color: #fff;
+}
+
+.header__title {
+  background: #0aa1da;
+  padding-bottom: 3rem;
+  padding-top: 3.5rem;
+}
+
+.header__name,
+.header__subtitle {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.header__name {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.header__subtitle {
+  font-size: 1.5rem;
+}
+
+.header__description {
+  background: #5b666c;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.header__text {
+  font-size: 1.3rem;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/*
+ * Information
+ */
+
+.information {
+  display: flex;
+  width: 100%;
+}
+
+/* In the end I changed the global h2 into this. */
+.information__heading {
+  color: #0aa1da;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.information__left,
+.information__right {
+  padding-top: 60px;
+}
+
+.information__left {
+  background: #f7f7f7;
+  border-right: 1px solid lightgray;
+  flex-basis: 42%;
+  /* I really dislike having to set the padding like this, but I guess I have no
+   * choice, so the left and right sides have their own background colors. I
+   * might have to do the same for the other elements, for consistency and
+   * sanity. */
+  padding-left: 130px;
+  padding-right: 40px;
+}
+
+.information__right {
+  background: #eee;
+  flex-grow: 1;
+  padding-left: 40px;
+  padding-right: 130px;
+}
+
+.information__section {
+  margin-bottom: 20px;
+}
+
+/*
+ * Personal
+ */
+
+.personal {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.personal__heading {
+  text-align: left;
+  width: 35%;
+}
+
+.personal__cell {
+  border-bottom: 1px solid lightgray;
+  padding: .6rem 0;
+}
+
+/*
+ * Software
+ */
+
+.software {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.software__heading {
+  font-weight: 300;
+  text-align: left;
+  width: 35%;
+}
+
+.software__cell {
+  padding: .3rem 0;
+}
+
+/*
+ * Progress
+ */
+
+.progress {
+  background: #cbcbcb;
+  display: block;
+  height: .5rem;
+  width: 100%;
+}
+
+.progress__value {
+  background: #0aa1da;
+  display: block;
+  height: 100%;
+  margin: 0;
+}
+
+.progress__value--100 {
+  width: 100%;
+}
+
+.progress__value--90 {
+  width: 90%;
+}
+
+.progress__value--80 {
+  width: 80%;
+}
+
+.progress__value--70 {
+  width: 70%;
+}
+
+.progress__value--60 {
+  width: 60%;
+}
+
+.progress__value--50 {
+  width: 50%;
+}
+
+/*
+ * Hobbies
+ */
+
+.hobbies {
+  display: grid;
+  grid-gap: 10px 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.hobbies__icon {
+  color: #9ec9ec;
+  font-size: 2.5rem;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.hobbies__label {
+  display: block;
+  font-size: .75rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/*
+ * Timeline
+ */
+
+.timeline {
+  padding-left: 20px;
+}
+
+.timeline__list {
+  border-left: 1px solid #0aa1da;
+  list-style-type: none;
+  padding-left: 40px;
+  width: 100%;
+}
+
+.timeline__item {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  width: 100%;
+  position: relative;
+}
+
+/* The pretty blue bullet */
+.timeline__item::before {
+  background: #0aa1da;
+  border-radius: 50%;
+  /* Same color as background, but part transparent */
+  box-shadow: 0 0 0 .5rem rgba(10,161,218,.4);
+  content: '';
+  display: block;
+  height: 1rem;
+  /* Or use a transform? But as far as I know transforms don't break the element
+   * out of the normal flow */
+  left: calc(-40px - .5rem);
+  position: absolute;
+  width: 1rem;
+}
+
+.timeline__title,
+.timeline__year,
+.timeline__description {
+  margin-top: 0;
+}
+
+.timeline__title,
+.timeline__year {
+  font-weight: 700;
+  line-height: 1rem;
+  margin-bottom: .75rem;
+}
+
+.timeline__title {
+  font-size: 1rem;
+}
+
+.timeline__description {
+  font-size: .95rem;
+  grid-column: span 2;
+  line-height: 1.2em;
+}
+
+/*
+ * Social
+ */
+
+.social {
+  background: #0aa1da;
+  display: flex;
+  justify-content: space-around; /* Fallback */
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 2.5rem 130px;
+  width: 100%;
+}
+
+.social__link {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: .9rem;
+  font-weight: 400;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.social__icon {
+  color: #028cd5;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/*
+ * Address
+ */
+
+.address {
+  background: #028cd5;
+  color: #fff;
+  font-size: .9rem;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 130px 1.5rem;
+}
+
+/* Not the best name, I know */
+.address__b {
+  font-weight: inherit;
+}
+
+.address__link {
+  color: inherit;
+  text-decoration: none;
+}
