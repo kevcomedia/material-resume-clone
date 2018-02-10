@@ -11,55 +11,59 @@
 </head>
 <body>
 
-  <nav class="nav">
-    <ul class="nav__row">
-      <li><a class="nav__link nav__link--first" href="#">Hello</a></li>
-      <li><a class="nav__link nav__link--active" href="#">Resume</a></li>
-      <li><a class="nav__link" href="#">Portfolio</a></li>
+  <nav class="row nav">
+    <ul class="flex-list">
+      <li class="nav__item">
+        <a class="nav__link" href="#">Hello</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link nav__link--active" href="#">Resume</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#">Portfolio</a>
+      </li>
     </ul>
   </nav>
 
   <header class="header">
-    <div class="header__title">
+    <div class="row header__title">
       <h1 class="header__name">David Brown</h1>
       <p class="header__subtitle">Architect</p>
     </div>
 
-    <div class="header__description">
-      <p class="header__text">Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Curabitur blandit tempus protitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula it id elit.</p>
-    </div>
+    <p class="row header__description">Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Curabitur blandit tempus protitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula it id elit.</p>
   </header>
 
   <section class="information">
     <!-- Left div -->
-    <div class="information__left">
+    <div class="row row--column--left information__left">
       <section class="information__section">
         <h2 class="information__heading">Personal</h2>
 
-        <table class="personal">
+        <table class="hor-table">
           <tr>
-            <th class="personal__heading personal__cell" scope="row">Name</th>
-            <td class="personal__cell">David Brown</td>
+            <th class="hor-table__heading hor-table__cell" scope="row">Name</th>
+            <td class="hor-table__cell">David Brown</td>
           </tr>
           <tr>
-            <th class="personal__heading personal__cell" scope="row">Birthday</th>
-            <td class="personal__cell">31st Dec 1990 (26)</td>
+            <th class="hor-table__heading hor-table__cell" scope="row">Birthday</th>
+            <td class="hor-table__cell">31st Dec 1990 (26)</td>
           </tr>
           <tr>
-            <th class="personal__heading personal__cell" scope="row">Relationship</th>
-            <td class="personal__cell">Single</td>
+            <th class="hor-table__heading hor-table__cell" scope="row">Relationship</th>
+            <td class="hor-table__cell">Single</td>
           </tr>
           <tr>
-            <th class="personal__heading personal__cell" scope="row">Nationality</th>
-            <td class="personal__cell">US Citizen</td>
+            <th class="hor-table__heading hor-table__cell" scope="row">Nationality</th>
+            <td class="hor-table__cell">US Citizen</td>
           </tr>
           <tr>
-            <th class="personal__heading personal__cell" scope="row">Languages</th>
-            <td class="personal__cell">English, French</td>
+            <th class="hor-table__heading hor-table__cell" scope="row">Languages</th>
+            <td class="hor-table__cell">English, French</td>
           </tr>
           <tr>
-            <th class="personal__heading personal__cell" scope="row">Telephone</th>
-            <td class="personal__cell">+1 (212) 123-4567</td>
+            <th class="hor-table__heading hor-table__cell" scope="row">Telephone</th>
+            <td class="hor-table__cell">+1 (212) 123-4567</td>
           </tr>
         </table>
       </section>
@@ -68,50 +72,50 @@
         <h2 class="information__heading">Software</h2>
 
         <!-- TODO replace numbers with progress bars -->
-        <table class="software">
+        <table class="hor-table hor-table--light">
           <tr>
-            <th class="software__heading software__cell" scope="row">Indesign CC</th>
-            <td class="software__cell">
+            <th class="hor-table__heading hor-table__cell" scope="row">Indesign CC</th>
+            <td class="hor-table__cell">
               <div class="progress">
                 <div class="progress__value progress__value--100"></div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="software__heading software__cell" scope="row">Illustrator CC</th>
-            <td class="software__cell">
+            <th class="hor-table__heading hor-table__cell" scope="row">Illustrator CC</th>
+            <td class="hor-table__cell">
               <div class="progress">
                 <div class="progress__value progress__value--90"></div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="software__heading software__cell" scope="row">Photoshop CC</th>
-            <td class="software__cell">
+            <th class="hor-table__heading hor-table__cell" scope="row">Photoshop CC</th>
+            <td class="hor-table__cell">
               <div class="progress">
                 <div class="progress__value progress__value--80"></div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="software__heading software__cell" scope="row">Sketch 3</th>
-            <td class="software__cell">
+            <th class="hor-table__heading hor-table__cell" scope="row">Sketch 3</th>
+            <td class="hor-table__cell">
               <div class="progress">
                 <div class="progress__value progress__value--70"></div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="software__heading software__cell" scope="row">HTML 5</th>
-            <td class="software__cell">
+            <th class="hor-table__heading hor-table__cell" scope="row">HTML 5</th>
+            <td class="hor-table__cell">
               <div class="progress">
                 <div class="progress__value progress__value--60"></div>
               </div>
             </td>
           </tr>
           <tr>
-            <th class="software__heading software__cell" scope="row">CSS 3</th>
-            <td class="software__cell">
+            <th class="hor-table__heading hor-table__cell" scope="row">CSS 3</th>
+            <td class="hor-table__cell">
               <div class="progress">
                 <div class="progress__value progress__value--50"></div>
               </div>
@@ -124,54 +128,54 @@
         <h2 class="information__heading">Hobbies</h2>
 
         <ul class="hobbies">
-          <li class="hobbies__item">
-            <span class="hobbies__icon fa-stack fa-fw">
+          <li class="labeled-icon">
+            <span class="labeled-icon__icon fa-stack fa-fw">
               <span class="fas fa-circle fa-stack-2x"></span>
               <span class="fas fa-tree fa-stack-1x fa-inverse"></span>
             </span>
-            <span class="hobbies__label">Outdoors</span>
+            <span class="labeled-icon__label">Outdoors</span>
           </li>
-          <li class="hobbies__item">
-            <span class="hobbies__icon fa-stack fa-fw">
+          <li class="labeled-icon">
+            <span class="labeled-icon__icon fa-stack fa-fw">
               <span class="fas fa-circle fa-stack-2x"></span>
               <span class="fas fa-plane fa-stack-1x fa-inverse"></span>
             </span>
-            <span class="hobbies__label">Traveling</span>
+            <span class="labeled-icon__label">Traveling</span>
           </li>
-          <li class="hobbies__item">
-            <span class="hobbies__icon fa-stack fa-fw">
+          <li class="labeled-icon">
+            <span class="labeled-icon__icon fa-stack fa-fw">
               <span class="fas fa-circle fa-stack-2x"></span>
               <span class="fas fa-basketball-ball fa-stack-1x fa-inverse"></span>
             </span>
-            <span class="hobbies__label">Basketball</span>
+            <span class="labeled-icon__label">Basketball</span>
           </li>
-          <li class="hobbies__item">
-            <span class="hobbies__icon fa-stack fa-fw">
+          <li class="labeled-icon">
+            <span class="labeled-icon__icon fa-stack fa-fw">
               <span class="fas fa-circle fa-stack-2x"></span>
               <span class="fas fa-laptop fa-stack-1x fa-inverse"></span>
             </span>
-            <span class="hobbies__label">Writing</span>
+            <span class="labeled-icon__label">Writing</span>
           </li>
-          <li class="hobbies__item">
-            <span class="hobbies__icon fa-stack fa-fw">
+          <li class="labeled-icon">
+            <span class="labeled-icon__icon fa-stack fa-fw">
               <span class="fas fa-circle fa-stack-2x"></span>
               <span class="fas fa-coffee fa-stack-1x fa-inverse"></span>
             </span>
-            <span class="hobbies__label">Socializing</span>
+            <span class="labeled-icon__label">Socializing</span>
           </li>
-          <li class="hobbies__item">
-            <span class="hobbies__icon fa-stack fa-fw">
+          <li class="labeled-icon">
+            <span class="labeled-icon__icon fa-stack fa-fw">
               <span class="fas fa-circle fa-stack-2x"></span>
               <span class="fas fa-gamepad fa-stack-1x fa-inverse"></span>
             </span>
-            <span class="hobbies__label">Games</span>
+            <span class="labeled-icon__label">Games</span>
           </li>
         </ul>
       </section>
     </div>
 
     <!-- Right div -->
-    <div class="information__right">
+    <div class="row row--column--right information__right">
       <section class="information__section">
         <h2 class="information__heading">Work</h2>
 
@@ -224,37 +228,39 @@
   </section>
 
   <footer>
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="social__icon fa-stack fa-fw">
-            <span class="fas fa-circle fa-stack-2x"></span>
-            <span class="fab fa-behance fa-stack-1x fa-inverse"></span>
-          </span>
-          <span class="social__label">www.behance.com/david.brown</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="social__icon fa-stack fa-fw">
-            <span class="fas fa-circle fa-stack-2x"></span>
-            <span class="fab fa-linkedin-in fa-stack-1x fa-inverse"></span>
-          </span>
-          <span class="social__label">www.linkedin.com/david.brown</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="social__icon fa-stack fa-fw">
-            <span class="fas fa-circle fa-stack-2x"></span>
-            <span class="fab fa-twitter fa-stack-1x fa-inverse"></span>
-          </span>
-          <span class="social__label">www.twitter.com/david.brown</span>
-        </a>
-      </li>
-    </ul>
+    <div class="row social">
+      <ul class="flex-list flex-list--spaced">
+        <li>
+          <a class="labeled-icon labeled-icon--dark social__link" href="#">
+            <span class="labeled-icon__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fab fa-behance fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="labeled-icon__label">www.behance.com/david.brown</span>
+          </a>
+        </li>
+        <li>
+          <a class="labeled-icon labeled-icon--dark social__link" href="#">
+            <span class="labeled-icon__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fab fa-linkedin-in fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="labeled-icon__label">www.linkedin.com/david.brown</span>
+          </a>
+        </li>
+        <li>
+          <a class="labeled-icon labeled-icon--dark social__link" href="#">
+            <span class="labeled-icon__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fab fa-twitter fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="labeled-icon__label">www.twitter.com/david.brown</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <address class="address">
+    <address class="row address">
       <span>
         Flat 2, 10 Broadway, New York, NY 12345, <b class="address__b">Call</b>: +1 (212) 123-4567, <b class="address__b">Email</b>: davidbrown@gmail.com
       </span>

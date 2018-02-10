@@ -15,6 +15,39 @@ body {
 }
 
 /*
+ * Rows
+ */
+
+.row {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.row--column--left {
+  padding-right: 40px;
+}
+
+.row--column--right {
+  padding-left: 40px;
+}
+
+/*
+ * Flex List
+ */
+
+.flex-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.flex-list--spaced {
+  justify-content: space-around; /* Fallback */
+  justify-content: space-evenly;
+}
+
+/*
  * Nav bar
  */
 
@@ -23,27 +56,23 @@ body {
   font-size: 1.1rem;
 }
 
-.nav__row {
-  display: flex;
-  list-style-type: none;
-  margin: 0 auto;
-  max-width: 1100px;
+.nav__item {
+  padding: 1.2rem .625rem 0;
+}
+
+.nav__item:first-child {
   padding-left: 0;
 }
 
 .nav__link {
   color: #29bdf5;
   display: block;
-  margin: 0 .625rem;
-  padding: 1.2rem 0 .6rem;
+  margin: 0;
   font-weight: 700;
+  padding-bottom: .6rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.nav__link--first {
-  padding-left: 0;
 }
 
 .nav__link--active {
@@ -68,7 +97,6 @@ body {
 .header__name,
 .header__subtitle {
   margin: 0 auto;
-  max-width: 1100px;
 }
 
 .header__name {
@@ -82,13 +110,10 @@ body {
 
 .header__description {
   background: #5b666c;
-  padding: 3.5rem 0 2.5rem;
-}
-
-.header__text {
   font-size: 1.3rem;
   margin: 0 auto;
-  max-width: 1100px;
+  padding-bottom: 2.5rem;
+  padding-top: 3.5rem;
 }
 
 /*
@@ -116,19 +141,11 @@ body {
   background: #f7f7f7;
   border-right: 1px solid lightgray;
   flex-basis: 42%;
-  /* I really dislike having to set the padding like this, but I guess I have no
-   * choice, so the left and right sides have their own background colors. I
-   * might have to do the same for the other elements, for consistency and
-   * sanity. */
-  padding-left: 130px;
-  padding-right: 40px;
 }
 
 .information__right {
   background: #eee;
   flex-grow: 1;
-  padding-left: 40px;
-  padding-right: 130px;
 }
 
 .information__section {
@@ -136,41 +153,37 @@ body {
 }
 
 /*
- * Personal
+ * Horizontal Table
  */
 
-.personal {
+.hor-table {
   border-collapse: collapse;
   width: 100%;
 }
 
-.personal__heading {
-  text-align: left;
-  width: 35%;
+.hor-table__heading,
+.hor-table__cell {
+  padding: .6rem 0;
+  border-bottom: 1px solid lightgray;
 }
 
-.personal__cell {
-  border-bottom: 1px solid lightgray;
-  padding: .6rem 0;
+.hor-table__heading {
+  text-align: left;
+  width: 35%;
 }
 
 /*
- * Software
+ * Lighter horizontal table
  */
 
-.software {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.software__heading {
-  font-weight: 300;
-  text-align: left;
-  width: 35%;
-}
-
-.software__cell {
+.hor-table--light .hor-table__heading,
+.hor-table--light .hor-table__cell {
   padding: .3rem 0;
+  border-bottom: 0;
+}
+
+.hor-table--light .hor-table__heading {
+  font-weight: 300;
 }
 
 /*
@@ -216,6 +229,38 @@ body {
 }
 
 /*
+ * Labeled Icon
+ */
+
+.labeled-icon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.labeled-icon__icon {
+  color: #9ec9ec;
+  font-size: 2.5rem;
+  margin-bottom: .625rem;
+}
+
+.labeled-icon__label {
+  font-size: .75rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.labeled-icon--dark .labeled-icon__icon {
+  color: #028cd5;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.labeled-icon--dark .labeled-icon__label {
+  font-size: .9rem;
+}
+
+/*
  * Hobbies
  */
 
@@ -226,20 +271,6 @@ body {
   grid-template-rows: 1fr 1fr;
   list-style-type: none;
   padding-left: 0;
-}
-
-.hobbies__icon {
-  color: #9ec9ec;
-  font-size: 2.5rem;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-.hobbies__label {
-  display: block;
-  font-size: .75rem;
-  font-weight: 400;
-  text-align: center;
 }
 
 /*
@@ -311,29 +342,13 @@ body {
 
 .social {
   background: #0aa1da;
-  display: flex;
-  justify-content: space-around; /* Fallback */
-  justify-content: space-evenly;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 2.5rem 130px;
-  width: 100%;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
 }
 
 .social__link {
-  align-items: center;
   color: #fff;
-  display: flex;
-  font-size: .9rem;
-  font-weight: 400;
-  flex-direction: column;
   text-decoration: none;
-}
-
-.social__icon {
-  color: #028cd5;
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
 }
 
 /*
@@ -348,7 +363,8 @@ body {
   font-weight: 400;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 130px 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
 }
 
 /* Not the best name, I know */
