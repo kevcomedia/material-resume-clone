@@ -47,19 +47,23 @@ body {
   padding-left: 0;
 }
 
+.nav__item {
+  padding: 1.2rem .625rem 0;
+}
+
+.nav__item:first-child {
+  padding-left: 0;
+}
+
 .nav__link {
   color: #29bdf5;
   display: block;
-  margin: 0 .625rem;
-  padding: 1.2rem 0 .6rem;
+  margin: 0;
   font-weight: 700;
+  padding-bottom: .6rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.nav__link--first {
-  padding-left: 0;
 }
 
 .nav__link--active {
