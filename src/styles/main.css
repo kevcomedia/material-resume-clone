@@ -32,19 +32,28 @@ body {
 }
 
 /*
+ * Flex List
+ */
+
+.flex-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.flex-list--spaced {
+  justify-content: space-around; /* Fallback */
+  justify-content: space-evenly;
+}
+
+/*
  * Nav bar
  */
 
 .nav {
   background: #028cd5;
   font-size: 1.1rem;
-}
-
-.nav__row {
-  display: flex;
-  list-style-type: none;
-  margin: 0 auto;
-  padding-left: 0;
 }
 
 .nav__item {
@@ -319,14 +328,8 @@ body {
 
 .social {
   background: #0aa1da;
-  display: flex;
-  justify-content: space-around; /* Fallback */
-  justify-content: space-evenly;
-  list-style-type: none;
-  margin: 0 auto;
   padding-bottom: 2.5rem;
   padding-top: 2.5rem;
-  width: 100%;
 }
 
 .social__link {

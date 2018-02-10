@@ -12,8 +12,7 @@
 <body>
 
   <nav class="row nav">
-    <!-- TODO: rename nav__row. See previous line why. -->
-    <ul class="nav__row">
+    <ul class="flex-list">
       <li class="nav__item">
         <a class="nav__link" href="#">Hello</a>
       </li>
@@ -233,35 +232,37 @@
   </section>
 
   <footer>
-    <ul class="row social">
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="social__icon fa-stack fa-fw">
-            <span class="fas fa-circle fa-stack-2x"></span>
-            <span class="fab fa-behance fa-stack-1x fa-inverse"></span>
-          </span>
-          <span class="social__label">www.behance.com/david.brown</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="social__icon fa-stack fa-fw">
-            <span class="fas fa-circle fa-stack-2x"></span>
-            <span class="fab fa-linkedin-in fa-stack-1x fa-inverse"></span>
-          </span>
-          <span class="social__label">www.linkedin.com/david.brown</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="#">
-          <span class="social__icon fa-stack fa-fw">
-            <span class="fas fa-circle fa-stack-2x"></span>
-            <span class="fab fa-twitter fa-stack-1x fa-inverse"></span>
-          </span>
-          <span class="social__label">www.twitter.com/david.brown</span>
-        </a>
-      </li>
-    </ul>
+    <div class="row social">
+      <ul class="flex-list flex-list--spaced">
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="social__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fab fa-behance fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="social__label">www.behance.com/david.brown</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="social__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fab fa-linkedin-in fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="social__label">www.linkedin.com/david.brown</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#">
+            <span class="social__icon fa-stack fa-fw">
+              <span class="fas fa-circle fa-stack-2x"></span>
+              <span class="fab fa-twitter fa-stack-1x fa-inverse"></span>
+            </span>
+            <span class="social__label">www.twitter.com/david.brown</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <address class="row address">
       <span>
