@@ -11,7 +11,8 @@
 </head>
 <body>
 
-  <nav class="nav">
+  <nav class="row nav">
+    <!-- TODO: rename nav__row. See previous line why. -->
     <ul class="nav__row">
       <li><a class="nav__link nav__link--first" href="#">Hello</a></li>
       <li><a class="nav__link nav__link--active" href="#">Resume</a></li>
@@ -20,19 +21,21 @@
   </nav>
 
   <header class="header">
-    <div class="header__title">
+    <div class="row header__title">
       <h1 class="header__name">David Brown</h1>
       <p class="header__subtitle">Architect</p>
     </div>
 
-    <div class="header__description">
-      <p class="header__text">Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Curabitur blandit tempus protitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula it id elit.</p>
-    </div>
+    <!--
+    There's no longer the need for header__description, since the row classes
+    now provide the padding.
+    -->
+    <p class="row header__text">Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Curabitur blandit tempus protitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula it id elit.</p>
   </header>
 
   <section class="information">
     <!-- Left div -->
-    <div class="information__left">
+    <div class="row row--column--left information__left">
       <section class="information__section">
         <h2 class="information__heading">Personal</h2>
 
@@ -171,7 +174,7 @@
     </div>
 
     <!-- Right div -->
-    <div class="information__right">
+    <div class="row row--column--right information__right">
       <section class="information__section">
         <h2 class="information__heading">Work</h2>
 
@@ -224,7 +227,7 @@
   </section>
 
   <footer>
-    <ul class="social">
+    <ul class="row social">
       <li class="social__item">
         <a class="social__link" href="#">
           <span class="social__icon fa-stack fa-fw">
@@ -254,7 +257,7 @@
       </li>
     </ul>
 
-    <address class="address">
+    <address class="row address">
       <span>
         Flat 2, 10 Broadway, New York, NY 12345, <b class="address__b">Call</b>: +1 (212) 123-4567, <b class="address__b">Email</b>: davidbrown@gmail.com
       </span>
