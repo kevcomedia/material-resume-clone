@@ -48,6 +48,13 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .row {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
 /*
  * Flex List
  */
