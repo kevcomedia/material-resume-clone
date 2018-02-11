@@ -23,6 +23,13 @@ body {
   padding-right: 10%;
 }
 
+@media screen and (min-width: 1500px) {
+  .row {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
 .row--column--left {
   padding-right: 2.5%;
 }
@@ -41,6 +48,7 @@ body {
   }
 }
 
+/* Will also apply to the left and right columns */
 @media screen and (max-width: 800px) {
   .row {
     padding-left: 5%;
