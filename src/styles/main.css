@@ -419,6 +419,13 @@ body {
   padding-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .skills {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 /*
  * Radial Meter
  */
@@ -435,6 +442,12 @@ body {
   .radial-meter {
     max-width: 100px;
     padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .radial-meter {
+    width: 100%;
   }
 }
 
