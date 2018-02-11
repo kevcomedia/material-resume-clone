@@ -520,6 +520,10 @@ body {
   }
 }
 
+.address__iblock {
+  display: inline-block;
+}
+
 /* Not the best name, I know */
 .address__b {
   font-weight: inherit;
