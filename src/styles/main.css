@@ -190,6 +190,17 @@ body {
   }
 }
 
+@media screen and (max-width: 710px) {
+  .information__left {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .information__section--columns--1,
+  .information__section--columns--2 {
+    grid-column: 2 / span 1;
+  }
+}
+
 /*
  * Horizontal Table
  */
@@ -325,6 +336,13 @@ body {
   .hobbies {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: unset;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .hobbies {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
   }
 }
 
