@@ -351,8 +351,24 @@ body {
  */
 
 .radial-meter {
-  width: 7.5rem;
-  height: 7.5rem;
+  height: 0;
+  max-width: 120px;
+  padding-top: 120px;
+  position: relative;
+  width: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+  .radial-meter {
+    max-width: 100px;
+    padding-top: 100px;
+  }
+}
+
+.radial-meter__svg {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .radial-meter__circle {
