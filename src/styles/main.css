@@ -31,6 +31,16 @@ body {
   padding-left: 2.5%;
 }
 
+@media screen and (max-width: 1080px) {
+  .row--column--left {
+    padding-right: 10%;
+  }
+
+  .row--column--right {
+    padding-left: 10%;
+  }
+}
+
 /*
  * Flex List
  */
@@ -125,6 +135,12 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1080px) {
+  .information {
+    flex-direction: column;
+  }
+}
+
 /* In the end I changed the global h2 into this. */
 .information__heading {
   color: #0aa1da;
@@ -150,6 +166,21 @@ body {
 
 .information__section {
   margin-bottom: 1.25rem;
+}
+
+/* This can probably go in its own grid block. */
+@media screen and (max-width: 1080px) {
+  .information__left {
+    border-bottom: .0625rem solid lightgray;
+    border-right: unset;
+    display: grid;
+    grid-gap: 2.5% 5%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .information__section--columns--2 {
+    grid-column: auto / span 2;
+  }
 }
 
 /*
@@ -271,6 +302,13 @@ body {
   grid-template-rows: 1fr 1fr;
   list-style-type: none;
   padding-left: 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .hobbies {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: unset;
+  }
 }
 
 /*
