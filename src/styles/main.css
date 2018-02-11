@@ -19,16 +19,16 @@ body {
  */
 
 .row {
-  padding-left: 130px;
-  padding-right: 130px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .row--column--left {
-  padding-right: 40px;
+  padding-right: 2.5%;
 }
 
 .row--column--right {
-  padding-left: 40px;
+  padding-left: 2.5%;
 }
 
 /*
@@ -134,12 +134,12 @@ body {
 
 .information__left,
 .information__right {
-  padding-top: 60px;
+  padding-top: 3.75rem;
 }
 
 .information__left {
   background: #f7f7f7;
-  border-right: 1px solid lightgray;
+  border-right: .0625rem solid lightgray;
   flex-basis: 42%;
 }
 
@@ -149,7 +149,7 @@ body {
 }
 
 .information__section {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 /*
@@ -164,7 +164,7 @@ body {
 .hor-table__heading,
 .hor-table__cell {
   padding: .6rem 0;
-  border-bottom: 1px solid lightgray;
+  border-bottom: .0625rem solid lightgray;
 }
 
 .hor-table__heading {
@@ -266,7 +266,7 @@ body {
 
 .hobbies {
   display: grid;
-  grid-gap: 10px 30px;
+  grid-gap: .625rem 1.875rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
   list-style-type: none;
@@ -278,18 +278,18 @@ body {
  */
 
 .timeline {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 .timeline__list {
-  border-left: 1px solid #0aa1da;
+  border-left: .0625rem solid #0aa1da;
   list-style-type: none;
-  padding-left: 40px;
+  padding-left: 2.5rem;
   width: 100%;
 }
 
 .timeline__item {
-  border-bottom: 1px solid lightgray;
+  border-bottom: .0625rem solid lightgray;
   margin-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -308,7 +308,7 @@ body {
   height: 1rem;
   /* Or use a transform? But as far as I know transforms don't break the element
    * out of the normal flow */
-  left: calc(-40px - .5rem);
+  left: -3rem;
   position: absolute;
   width: 1rem;
 }
@@ -351,13 +351,13 @@ body {
  */
 
 .radial-meter {
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
 }
 
 .radial-meter__circle {
   fill: none;
-  stroke-width: 12px;
+  stroke-width: .75rem;
 }
 
 .radial-meter__circle--background {
