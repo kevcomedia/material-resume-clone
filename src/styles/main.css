@@ -19,16 +19,48 @@ body {
  */
 
 .row {
-  padding-left: 130px;
-  padding-right: 130px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media screen and (min-width: 1500px) {
+  .row {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }
 
 .row--column--left {
-  padding-right: 40px;
+  padding-right: 2.5%;
 }
 
 .row--column--right {
-  padding-left: 40px;
+  padding-left: 2.5%;
+}
+
+@media screen and (max-width: 1080px) {
+  .row--column--left {
+    padding-right: 10%;
+  }
+
+  .row--column--right {
+    padding-left: 10%;
+  }
+}
+
+/* Will also apply to the left and right columns */
+@media screen and (max-width: 800px) {
+  .row {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .row {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }
 
 /*
@@ -116,6 +148,16 @@ body {
   padding-top: 3.5rem;
 }
 
+@media screen and (max-width: 400px) {
+  .header__name {
+    font-size: 3rem;
+  }
+
+  .header__description {
+    font-size: 1rem;
+  }
+}
+
 /*
  * Information
  */
@@ -123,6 +165,12 @@ body {
 .information {
   display: flex;
   width: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .information {
+    flex-direction: column;
+  }
 }
 
 /* In the end I changed the global h2 into this. */
@@ -134,12 +182,12 @@ body {
 
 .information__left,
 .information__right {
-  padding-top: 60px;
+  padding-top: 3.75rem;
 }
 
 .information__left {
   background: #f7f7f7;
-  border-right: 1px solid lightgray;
+  border-right: .0625rem solid lightgray;
   flex-basis: 42%;
 }
 
@@ -149,7 +197,34 @@ body {
 }
 
 .information__section {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+
+/* This can probably go in its own grid block. */
+@media screen and (max-width: 1080px) {
+  .information__left {
+    border-bottom: .0625rem solid lightgray;
+    border-right: unset;
+    display: grid;
+    grid-gap: 2.5% 5%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .information__section--columns--2 {
+    grid-column: auto / span 2;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .information__left {
+    grid-column-gap: 0;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .information__section--columns--1,
+  .information__section--columns--2 {
+    grid-column: 2 / span 1;
+  }
 }
 
 /*
@@ -164,12 +239,18 @@ body {
 .hor-table__heading,
 .hor-table__cell {
   padding: .6rem 0;
-  border-bottom: 1px solid lightgray;
+  border-bottom: .0625rem solid lightgray;
 }
 
 .hor-table__heading {
   text-align: left;
   width: 35%;
+}
+
+@media screen and (max-width: 350px) {
+  .hor-table {
+    font-size: .9em;
+  }
 }
 
 /*
@@ -260,17 +341,41 @@ body {
   font-size: .9rem;
 }
 
+@media screen and (max-width: 800px) {
+  .labeled-icon--dark .labeled-icon__icon {
+    margin-bottom: 0;
+  }
+
+  .labeled-icon--dark .labeled-icon__label {
+    display: none;
+  }
+}
+
 /*
  * Hobbies
  */
 
 .hobbies {
   display: grid;
-  grid-gap: 10px 30px;
+  grid-gap: .625rem 1.875rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
   list-style-type: none;
   padding-left: 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .hobbies {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: unset;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .hobbies {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 /*
@@ -278,18 +383,18 @@ body {
  */
 
 .timeline {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 .timeline__list {
-  border-left: 1px solid #0aa1da;
+  border-left: .0625rem solid #0aa1da;
   list-style-type: none;
-  padding-left: 40px;
+  padding-left: 2.5rem;
   width: 100%;
 }
 
 .timeline__item {
-  border-bottom: 1px solid lightgray;
+  border-bottom: .0625rem solid lightgray;
   margin-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -308,7 +413,7 @@ body {
   height: 1rem;
   /* Or use a transform? But as far as I know transforms don't break the element
    * out of the normal flow */
-  left: calc(-40px - .5rem);
+  left: -3rem;
   position: absolute;
   width: 1rem;
 }
@@ -336,6 +441,16 @@ body {
   line-height: 1.2em;
 }
 
+@media screen and (max-width: 550px) {
+  .timeline__item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline__description {
+    grid-column: span 1;
+  }
+}
+
 /*
  * Skills
  */
@@ -346,18 +461,47 @@ body {
   padding-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .skills {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 /*
  * Radial Meter
  */
 
 .radial-meter {
-  width: 120px;
-  height: 120px;
+  height: 0;
+  max-width: 120px;
+  padding-top: 120px;
+  position: relative;
+  width: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+  .radial-meter {
+    max-width: 100px;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .radial-meter {
+    width: 100%;
+  }
+}
+
+.radial-meter__svg {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .radial-meter__circle {
   fill: none;
-  stroke-width: 12px;
+  stroke-width: .75rem;
 }
 
 .radial-meter__circle--background {
@@ -440,6 +584,17 @@ body {
   justify-content: space-between;
   padding-bottom: 1.5rem;
   padding-top: 1rem;
+}
+
+@media screen and (max-width: 1040px) {
+  .address {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.address__iblock {
+  display: inline-block;
 }
 
 /* Not the best name, I know */
