@@ -496,6 +496,13 @@ body {
   padding-top: 1rem;
 }
 
+@media screen and (max-width: 1040px) {
+  .address {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* Not the best name, I know */
 .address__b {
   font-weight: inherit;
