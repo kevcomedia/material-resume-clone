@@ -209,6 +209,7 @@ body {
 
 @media screen and (max-width: 710px) {
   .information__left {
+    grid-column-gap: 0;
     grid-template-columns: 1fr auto 1fr;
   }
 
