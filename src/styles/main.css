@@ -239,6 +239,12 @@ body {
   width: 35%;
 }
 
+@media screen and (max-width: 350px) {
+  .hor-table {
+    font-size: .9em;
+  }
+}
+
 /*
  * Lighter horizontal table
  */
