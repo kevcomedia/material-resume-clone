@@ -121,12 +121,6 @@ body {
   font-weight: 300;
 }
 
-@media screen and (max-width: 400px) {
-  .header__name {
-    font-size: 3rem;
-  }
-}
-
 .header__subtitle {
   font-size: 1.5rem;
 }
@@ -137,6 +131,16 @@ body {
   margin: 0 auto;
   padding-bottom: 2.5rem;
   padding-top: 3.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .header__name {
+    font-size: 3rem;
+  }
+
+  .header__description {
+    font-size: 1rem;
+  }
 }
 
 /*
