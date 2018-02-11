@@ -1,0 +1,608 @@
+/*
+ * Global styles
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 300 16px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Rows
+ */
+
+.row {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media screen and (min-width: 1500px) {
+  .row {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+.row--column--left {
+  padding-right: 2.5%;
+}
+
+.row--column--right {
+  padding-left: 2.5%;
+}
+
+@media screen and (max-width: 1080px) {
+  .row--column--left {
+    padding-right: 10%;
+  }
+
+  .row--column--right {
+    padding-left: 10%;
+  }
+}
+
+/* Will also apply to the left and right columns */
+@media screen and (max-width: 800px) {
+  .row {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .row {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+/*
+ * Flex List
+ */
+
+.flex-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.flex-list--spaced {
+  justify-content: space-around; /* Fallback */
+  justify-content: space-evenly;
+}
+
+/*
+ * Nav bar
+ */
+
+.nav {
+  background: #028cd5;
+  font-size: 1.1rem;
+}
+
+.nav__item {
+  padding: 1.2rem .625rem 0;
+}
+
+.nav__item:first-child {
+  padding-left: 0;
+}
+
+.nav__link {
+  color: #29bdf5;
+  display: block;
+  margin: 0;
+  font-weight: 700;
+  padding-bottom: .6rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link--active {
+  border-bottom: .125rem solid #fff;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+
+.header {
+  color: #fff;
+}
+
+.header__title {
+  background: #0aa1da;
+  padding-bottom: 3rem;
+  padding-top: 3.5rem;
+}
+
+.header__name,
+.header__subtitle {
+  margin: 0 auto;
+}
+
+.header__name {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.header__subtitle {
+  font-size: 1.5rem;
+}
+
+.header__description {
+  background: #5b666c;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+  padding-top: 3.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .header__name {
+    font-size: 3rem;
+  }
+
+  .header__description {
+    font-size: 1rem;
+  }
+}
+
+/*
+ * Information
+ */
+
+.information {
+  display: flex;
+  width: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .information {
+    flex-direction: column;
+  }
+}
+
+/* In the end I changed the global h2 into this. */
+.information__heading {
+  color: #0aa1da;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.information__left,
+.information__right {
+  padding-top: 3.75rem;
+}
+
+.information__left {
+  background: #f7f7f7;
+  border-right: .0625rem solid lightgray;
+  flex-basis: 42%;
+}
+
+.information__right {
+  background: #eee;
+  flex-grow: 1;
+}
+
+.information__section {
+  margin-bottom: 1.25rem;
+}
+
+/* This can probably go in its own grid block. */
+@media screen and (max-width: 1080px) {
+  .information__left {
+    border-bottom: .0625rem solid lightgray;
+    border-right: unset;
+    display: grid;
+    grid-gap: 2.5% 5%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .information__section--columns--2 {
+    grid-column: auto / span 2;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .information__left {
+    grid-column-gap: 0;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .information__section--columns--1,
+  .information__section--columns--2 {
+    grid-column: 2 / span 1;
+  }
+}
+
+/*
+ * Horizontal Table
+ */
+
+.hor-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.hor-table__heading,
+.hor-table__cell {
+  padding: .6rem 0;
+  border-bottom: .0625rem solid lightgray;
+}
+
+.hor-table__heading {
+  text-align: left;
+  width: 35%;
+}
+
+@media screen and (max-width: 350px) {
+  .hor-table {
+    font-size: .9em;
+  }
+}
+
+/*
+ * Lighter horizontal table
+ */
+
+.hor-table--light .hor-table__heading,
+.hor-table--light .hor-table__cell {
+  padding: .3rem 0;
+  border-bottom: 0;
+}
+
+.hor-table--light .hor-table__heading {
+  font-weight: 300;
+}
+
+/*
+ * Progress
+ */
+
+.progress {
+  background: #cbcbcb;
+  display: block;
+  height: .5rem;
+  width: 100%;
+}
+
+.progress__value {
+  background: #0aa1da;
+  display: block;
+  height: 100%;
+  margin: 0;
+}
+
+.progress__value--100 {
+  width: 100%;
+}
+
+.progress__value--90 {
+  width: 90%;
+}
+
+.progress__value--80 {
+  width: 80%;
+}
+
+.progress__value--70 {
+  width: 70%;
+}
+
+.progress__value--60 {
+  width: 60%;
+}
+
+.progress__value--50 {
+  width: 50%;
+}
+
+/*
+ * Labeled Icon
+ */
+
+.labeled-icon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.labeled-icon__icon {
+  color: #9ec9ec;
+  font-size: 2.5rem;
+  margin-bottom: .625rem;
+}
+
+.labeled-icon__label {
+  font-size: .75rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.labeled-icon--dark .labeled-icon__icon {
+  color: #028cd5;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.labeled-icon--dark .labeled-icon__label {
+  font-size: .9rem;
+}
+
+@media screen and (max-width: 800px) {
+  .labeled-icon--dark .labeled-icon__icon {
+    margin-bottom: 0;
+  }
+
+  .labeled-icon--dark .labeled-icon__label {
+    display: none;
+  }
+}
+
+/*
+ * Hobbies
+ */
+
+.hobbies {
+  display: grid;
+  grid-gap: .625rem 1.875rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .hobbies {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: unset;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .hobbies {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+/*
+ * Timeline
+ */
+
+.timeline {
+  padding-left: 1.25rem;
+}
+
+.timeline__list {
+  border-left: .0625rem solid #0aa1da;
+  list-style-type: none;
+  padding-left: 2.5rem;
+  width: 100%;
+}
+
+.timeline__item {
+  border-bottom: .0625rem solid lightgray;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  width: 100%;
+  position: relative;
+}
+
+/* The pretty blue bullet */
+.timeline__item::before {
+  background: #0aa1da;
+  border-radius: 50%;
+  /* Same color as background, but part transparent */
+  box-shadow: 0 0 0 .5rem rgba(10,161,218,.4);
+  content: '';
+  display: block;
+  height: 1rem;
+  /* Or use a transform? But as far as I know transforms don't break the element
+   * out of the normal flow */
+  left: -3rem;
+  position: absolute;
+  width: 1rem;
+}
+
+.timeline__title,
+.timeline__year,
+.timeline__description {
+  margin-top: 0;
+}
+
+.timeline__title,
+.timeline__year {
+  font-weight: 700;
+  line-height: 1rem;
+  margin-bottom: .75rem;
+}
+
+.timeline__title {
+  font-size: 1rem;
+}
+
+.timeline__description {
+  font-size: .95rem;
+  grid-column: span 2;
+  line-height: 1.2em;
+}
+
+@media screen and (max-width: 550px) {
+  .timeline__item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline__description {
+    grid-column: span 1;
+  }
+}
+
+/*
+ * Skills
+ */
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .skills {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+/*
+ * Radial Meter
+ */
+
+.radial-meter {
+  height: 0;
+  max-width: 120px;
+  padding-top: 120px;
+  position: relative;
+  width: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+  .radial-meter {
+    max-width: 100px;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .radial-meter {
+    width: 100%;
+  }
+}
+
+.radial-meter__svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.radial-meter__circle {
+  fill: none;
+  stroke-width: .75rem;
+}
+
+.radial-meter__circle--background {
+  stroke: #dadada;
+}
+
+.radial-meter__circle--foreground {
+  stroke: #0aa1da;
+  /* Circumference, with radius 54px in the markup :( */
+  stroke-dasharray: 339.292px; 
+  transform-origin: center;
+}
+
+/* Offset is calculated as `circumference * (1 - progress)`.
+ * calc() doesn't seem to work.
+ * This is where preprocessors really shine.
+ *
+ * I'd really like `value` to modify the radial-meter block, not the circle
+ * (because `radial-meter--value--100` really sounds more natural), but I have
+ * to do an additional rotation so the progress is counterclockwise. If I
+ * rotated the radial meter itself, the text will also rotate. */
+
+.radial-meter__circle--value--100 {
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+}
+
+.radial-meter__circle--value--90 {
+  stroke-dashoffset: 33.93px;
+  transform: rotate(-54deg);
+}
+
+.radial-meter__circle--value--80 {
+  stroke-dashoffset: 67.86px;
+  transform: rotate(-18deg);
+}
+
+.radial-meter__circle--value--70 {
+  stroke-dashoffset: 101.79px;
+  transform: rotate(18deg);
+}
+
+.radial-meter__circle--value--60 {
+  stroke-dashoffset: 135.72px;
+  transform: rotate(54deg);
+}
+
+.radial-meter__label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+/*
+ * Social
+ */
+
+.social {
+  background: #0aa1da;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+.social__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Address
+ */
+
+.address {
+  background: #028cd5;
+  color: #fff;
+  font-size: .9rem;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 1040px) {
+  .address {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.address__iblock {
+  display: inline-block;
+}
+
+/* Not the best name, I know */
+.address__b {
+  font-weight: inherit;
+}
+
+.address__link {
+  color: inherit;
+  text-decoration: none;
+}
