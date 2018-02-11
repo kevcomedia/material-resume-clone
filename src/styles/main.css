@@ -419,6 +419,16 @@ body {
   line-height: 1.2em;
 }
 
+@media screen and (max-width: 550px) {
+  .timeline__item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline__description {
+    grid-column: span 1;
+  }
+}
+
 /*
  * Skills
  */
