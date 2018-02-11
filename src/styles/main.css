@@ -291,6 +291,16 @@ body {
   font-size: .9rem;
 }
 
+@media screen and (max-width: 800px) {
+  .labeled-icon--dark .labeled-icon__icon {
+    margin-bottom: 0;
+  }
+
+  .labeled-icon--dark .labeled-icon__label {
+    display: none;
+  }
+}
+
 /*
  * Hobbies
  */
